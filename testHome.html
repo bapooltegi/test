@@ -3,10 +3,10 @@
 <head>
     <!-- 구글 애드센스 -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet"/>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet"/>
   <title>What is My Crypto Character?</title>
 </head>
 <body>
@@ -24,30 +24,34 @@
     </span>
 
     <main class="questionBox">
-        <span class="questionNumb">Q1</span>
+        <span class="questionNumb">Q<span id="qnumbName">1</span></span>
         <p class="questionDesc">I'm usually lazy When working. I'm usually lazy When working.</p>
     </main>
 
     <main class="answerBtns">
-        <button class="mainBtn1">Yes I'm too lazy</button>
-        <button class="mainBtn2">No I'm hardworker</button>
+        <button class="mainBtn1" onclick="count('plus')" value ="+">Yes I'm too lazy</button>
+        <button class="mainBtn2" onclick="count('minus')" value="-">No I'm hardworker</button>
     </main>
-
+    
+    <span>점수
+        <span id="scoreNumb">0</span>
+    </span>
+    
     <!-- 구글 광고 -->
-    <span class="adPosition"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4445590613813295"
+        <span class="adPosition"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4445590613813295"
         crossorigin="anonymous"></script>
    <!-- footerAD -->
-   <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4445590613813295"
-        data-ad-slot="4421129572"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-   <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-   </script>
-   </span>
+            <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4445590613813295"
+            data-ad-slot="4421129572"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+        </span>
 
-
+   <script src="testScript.js"></script>
 </body>
 </html>
