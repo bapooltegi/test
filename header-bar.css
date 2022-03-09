@@ -11,6 +11,7 @@
 }
 
 .headerBar > span{
+    color:rgb(42, 46, 53);
     padding-bottom: 0.2rem;
 }
 
@@ -34,5 +35,6 @@
     width: 8.4%;
     font-size:0rem;
     background-color: var(--primaryColor);
-    
+    animation-name: widthIncrease;
+    animation-duration: 1s;
 }
