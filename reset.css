@@ -86,8 +86,3 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
-
-input:focus {
-  outline: none;
-} /* 탭으로 인풋 접근할때 파란 아웃라인을 없애줌 */
