@@ -1,0 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap"); /* 폰트 */
+@import "reset.css"; /* css 리셋 */
+/* @import "variables.css";  /* css 변수만 따로 넣어둘 수 있으니 미리 만들어둠 */
+@import "header-bar.css"; /*hedaer-bar css */
+
