@@ -1,53 +1,132 @@
-    
-    
-//각각의 속성 카운트
-    let e_Count;
-    let i_Count;
-
-    let s_Count;
-    let n_Count;
-
-    let f_Count;
-    let t_Count;
-
-    let p_Count;
-    let j_Count;
-
-//속성별 결과
-    let ei_Bool = true;
-    let sn_Bool = true;
-    let ft_Bool = true;
-    let pj_Bool = true;
-
-// 위 결과를 비교해서 도출한 뒤에 각각의 html 페이지로 보내면 된다.
-
-
+    let ei_Bool;
+    let sn_Bool;
+    let ft_Bool;
+    let pj_Bool;    
 //카운트 함수
     function count(type){
     /* id qnumbName엘레멘트를 가져와서 viewQnumb 변수에 대입해서 메모리를 만듬 */
     const viewQnumb = document.getElementById('qnumbName');
-
-    /* id 스코어넘버 엘레멘트를 가져와서 resultScore 변수에 대입해서 메모리를 만듬 */
-    const resultScore = document.getElementById('scoreNumb');
-
+    const resultEnumb = document.getElementById('eNumb');
+    const resultInumb = document.getElementById('iNumb');
+    const resultSnumb = document.getElementById('sNumb');
+    const resultNnumb = document.getElementById('nNumb');
+    const resultFnumb = document.getElementById('fNumb');
+    const resultTnumb = document.getElementById('tNumb');
+    const resultPnumb = document.getElementById('pNumb');
+    const resultJnumb = document.getElementById('jNumb');
+    const changeQuestion = document.getElementById('questionDesc');
     /*  resultScore,viewQnumb엘레멘트의 innerText를 이용해서 값을 가져와 변수에 대입  */
-    let score = resultScore.innerText;
     let qNumb = viewQnumb.innerText;
-
-    /*  더하기 빼기  parseInt()는 엘레먼트 텍스트를 숫자 */
-    if(type === 'plus'){
-        score = parseInt(score) + 1;
-        qNumb = parseInt(qNumb) +1;
+    let eScore = resultEnumb.innerText;
+    let iScore = resultInumb.innerText;
+    let sScore = resultSnumb.innerText;
+    let nScore = resultNnumb.innerText;
+    let fScore = resultFnumb.innerText;
+    let tScore = resultTnumb.innerText;
+    let pScore = resultPnumb.innerText;
+    let jScore = resultJnumb.innerText;
+    let changedQuestion = changeQuestion.innerText;
         
-    }else if(type === 'minus'){
-        score = parseInt(score) -1;
-        qNumb = parseInt(qNumb) +1; 
+    /*  더하기 빼기  parseInt()는 엘레먼트 텍스트를 숫자 */
+    //문제가 3이하면 e 에 1 추가   가져온게 텍스트타입이라 인트로 파싱(분석)해줘야됨.
+
+    //감성적 타입의 버튼을 눌렀을 경우 문제 순서에 따라서 각 성향의 점수를 주고, 문제순서를 올린다.
+    if(type === 'emotion'){
+        if(qNumb <= 3){
+            eScore = parseInt(eScore)+1;
+            qNumb = parseInt(qNumb) +1;
+            
+        }else if(qNumb > 3 && qNumb <= 6){
+            sScore = parseInt(sScore)+1;
+            qNumb = parseInt(qNumb) +1;
+        }else if(qNumb > 6 && qNumb <= 9){
+            fScore = parseInt(fScore)+1;
+            qNumb = parseInt(qNumb) +1;
+        }else{
+            pScore = parseInt(pScore)+1;
+            qNumb = parseInt(qNumb) +1;
+        }
+    //이성적 타입의 버튼을 눌렀을 경우 문제 순서에 따라서 각 성향의 점수를 주고, 문제순서를 올린다.
+    }else if(type === 'intelligent'){
+        if(qNumb <= 3){
+            iScore = parseInt(iScore)+1;
+            qNumb = parseInt(qNumb) +1;
+        }else if(qNumb > 3 && qNumb <= 6){
+            nScore = parseInt(nScore)+1;
+            qNumb = parseInt(qNumb) +1;
+        }else if(qNumb > 6 && qNumb <= 9){
+            tScore = parseInt(tScore)+1;
+            qNumb = parseInt(qNumb) +1;
+        }else{
+            jScore = parseInt(jScore)+1;
+            qNumb = parseInt(qNumb) +1;
+        }
     }
+    /* 문제순서에 따라 문제설명을 바꿔줌 */
+    if(qNumb==2){
+        changedQuestion = "2번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==3){
+        changedQuestion = "3번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==4){
+        changedQuestion = "4번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==5){
+        changedQuestion = "5번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==6){
+        changedQuestion = "6번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==7){
+        changedQuestion = "7번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==8){
+        changedQuestion = "8번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==9){
+        changedQuestion = "9번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==10){
+        changedQuestion = "10번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==11){
+        changedQuestion = "11번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }else if(qNumb==12){
+        changedQuestion = "12번 문제";
+        changeQuestion.innerText = changedQuestion;
+    }
+    
+    /* 각 성향 점수에 따라 성향체크 */
+    (eScore > iScore)? ei_Bool = true : ei_Bool = false;
+    console.log("e성향"+ei_Bool);
+    (sScore > nScore)? sn_Bool = true : sn_Bool = false;
+    console.log("s성향"+sn_Bool);
+    (fScore > tScore)? ft_Bool = true : ft_Bool = false;
+    console.log("f성향"+ft_Bool);
+    (pScore > jScore)? pj_Bool = true : pj_Bool = false;
+    console.log("p성향"+pj_Bool);
+
+    /*페이지 보내기*/
+    
 
     /* 결과 출력 */
-    resultScore.innerText = score;
+    
     viewQnumb.innerText = qNumb;
-}
+    resultEnumb.innerText = eScore;
+    resultSnumb.innerText = sScore;
+    resultFnumb.innerText = fScore;
+    resultPnumb.innerText = pScore;
+    resultInumb.innerText = iScore;
+    resultNnumb.innerText = nScore;
+    resultTnumb.innerText = tScore;
+    resultJnumb.innerText = jScore;
+
+    }   // 카운트 함수 끝
+    
+    
+    //eiQ
     // e_Count > i_Count 외향 내향
     // s_Count > n_Count 감성 지성
     // f_Count > t_Count 감성 지성
