@@ -22,14 +22,14 @@
     box-shadow: 0rem 1rem 4rem #98b5c0;
 }
 
-.timeLineBar-bg{
+#timeLineBar-bg{
     display: flex;
     height: 0.15rem;
     width: 100%;
     background-color: rgb(230, 234, 238);
 }
 
-.timeLineBar li{
+#timeLineBar-bg li{
     display: flex;
     height: 0.15rem;
     width: 8.4%;

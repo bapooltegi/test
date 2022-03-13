@@ -26,6 +26,12 @@
     let pScore = resultPnumb.innerText;
     let jScore = resultJnumb.innerText;
     let changedQuestion = changeQuestion.innerText;
+
+    
+    /* 슬라이더 엘레멘트 요소를 li를 만들어서 타임라인바에 어펜드차일드 시킨다.*/
+    let createdSlider = document.createElement("li");
+    const sliderBar = document.getElementById('timeLineBar-bg');
+    sliderBar.appendChild(createdSlider);
         
     /*  더하기 빼기  parseInt()는 엘레먼트 텍스트를 숫자 */
     //문제가 3이하면 e 에 1 추가   가져온게 텍스트타입이라 인트로 파싱(분석)해줘야됨.
