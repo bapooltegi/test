@@ -15,6 +15,9 @@
     const resultPnumb = document.getElementById('pNumb');
     const resultJnumb = document.getElementById('jNumb');
     const changeQuestion = document.getElementById('questionDesc');
+    const mainBtn_1 = document.getElementById('mainBtn1');
+    const mainBtn_2 = document.getElementById('mainBtn2');
+
     /*  resultScore,viewQnumb엘레멘트의 innerText를 이용해서 값을 가져와 변수에 대입  */
     let qNumb = viewQnumb.innerText;
     let eScore = resultEnumb.innerText;
@@ -26,6 +29,8 @@
     let pScore = resultPnumb.innerText;
     let jScore = resultJnumb.innerText;
     let changedQuestion = changeQuestion.innerText;
+    let changedBtn1 = mainBtn_1.innerText;
+    let changedBtn2 = mainBtn_2.innerText;
 
     
     /* 슬라이더 엘레멘트 요소를 li를 만들어서 타임라인바에 어펜드차일드 시킨다.*/
@@ -72,38 +77,84 @@
     if(qNumb==2){
         changedQuestion = "2번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "2번문제 yes";
+        changedBtn2 = "2번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==3){
         changedQuestion = "3번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "3번문제 yes";
+        changedBtn2 = "3번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==4){
         changedQuestion = "4번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "4번문제 yes";
+        changedBtn2 = "4번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==5){
         changedQuestion = "5번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "5번문제 yes";
+        changedBtn2 = "5번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==6){
         changedQuestion = "6번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "6번문제 yes";
+        changedBtn2 = "6번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==7){
         changedQuestion = "7번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "7번문제 yes";
+        changedBtn2 = "7번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==8){
         changedQuestion = "8번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "8번문제 yes";
+        changedBtn2 = "8번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==9){
         changedQuestion = "9번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "9번문제 yes";
+        changedBtn2 = "9번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==10){
         changedQuestion = "10번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "10번문제 yes";
+        changedBtn2 = "10번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==11){
         changedQuestion = "11번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "11번문제 yes";
+        changedBtn2 = "11번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }else if(qNumb==12){
         changedQuestion = "12번 문제";
         changeQuestion.innerText = changedQuestion;
+        changedBtn1 = "12번문제 yes";
+        changedBtn2 = "12번문제 no";
+        mainBtn_1.innerText = changedBtn1; 
+        mainBtn_2.innerText = changedBtn2;
     }
     
+    
+
     /* 각 성향 점수에 따라 성향체크 */
     (eScore > iScore)? ei_Bool = true : ei_Bool = false;
     console.log("e성향"+ei_Bool);
