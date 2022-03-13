@@ -1,33 +1,30 @@
+
+
+    let eScore = 0;
+    let iScore = 0;
+    let sScore = 0;
+    let nScore = 0;
+    let fScore = 0;
+    let tScore = 0;
+    let pScore = 0;
+    let jScore = 0;
+
     let ei_Bool;
     let sn_Bool;
     let ft_Bool;
     let pj_Bool;    
+
 //카운트 함수
     function count(type){
     /* id qnumbName엘레멘트를 가져와서 viewQnumb 변수에 대입해서 메모리를 만듬 */
     const viewQnumb = document.getElementById('qnumbName');
-    const resultEnumb = document.getElementById('eNumb');
-    const resultInumb = document.getElementById('iNumb');
-    const resultSnumb = document.getElementById('sNumb');
-    const resultNnumb = document.getElementById('nNumb');
-    const resultFnumb = document.getElementById('fNumb');
-    const resultTnumb = document.getElementById('tNumb');
-    const resultPnumb = document.getElementById('pNumb');
-    const resultJnumb = document.getElementById('jNumb');
     const changeQuestion = document.getElementById('questionDesc');
     const mainBtn_1 = document.getElementById('mainBtn1');
     const mainBtn_2 = document.getElementById('mainBtn2');
 
     /*  resultScore,viewQnumb엘레멘트의 innerText를 이용해서 값을 가져와 변수에 대입  */
     let qNumb = viewQnumb.innerText;
-    let eScore = resultEnumb.innerText;
-    let iScore = resultInumb.innerText;
-    let sScore = resultSnumb.innerText;
-    let nScore = resultNnumb.innerText;
-    let fScore = resultFnumb.innerText;
-    let tScore = resultTnumb.innerText;
-    let pScore = resultPnumb.innerText;
-    let jScore = resultJnumb.innerText;
+   
     let changedQuestion = changeQuestion.innerText;
     let changedBtn1 = mainBtn_1.innerText;
     let changedBtn2 = mainBtn_2.innerText;
@@ -44,32 +41,32 @@
     //감성적 타입의 버튼을 눌렀을 경우 문제 순서에 따라서 각 성향의 점수를 주고, 문제순서를 올린다.
     if(type === 'emotion'){
         if(qNumb <= 3){
-            eScore = parseInt(eScore)+1;
+            eScore += 1;
             qNumb = parseInt(qNumb) +1;
             
         }else if(qNumb > 3 && qNumb <= 6){
-            sScore = parseInt(sScore)+1;
+            sScore += 1;
             qNumb = parseInt(qNumb) +1;
         }else if(qNumb > 6 && qNumb <= 9){
-            fScore = parseInt(fScore)+1;
+            fScore += 1;
             qNumb = parseInt(qNumb) +1;
         }else{
-            pScore = parseInt(pScore)+1;
+            pScore += 1;
             qNumb = parseInt(qNumb) +1;
         }
     //이성적 타입의 버튼을 눌렀을 경우 문제 순서에 따라서 각 성향의 점수를 주고, 문제순서를 올린다.
     }else if(type === 'intelligent'){
         if(qNumb <= 3){
-            iScore = parseInt(iScore)+1;
+            iScore += 1;
             qNumb = parseInt(qNumb) +1;
         }else if(qNumb > 3 && qNumb <= 6){
-            nScore = parseInt(nScore)+1;
+            nScore += 1;
             qNumb = parseInt(qNumb) +1;
         }else if(qNumb > 6 && qNumb <= 9){
-            tScore = parseInt(tScore)+1;
+            tScore += 1;
             qNumb = parseInt(qNumb) +1;
         }else{
-            jScore = parseInt(jScore)+1;
+            jScore += 1;
             qNumb = parseInt(qNumb) +1;
         }
     }
@@ -171,14 +168,15 @@
     /* 결과 출력 */
     
     viewQnumb.innerText = qNumb;
-    resultEnumb.innerText = eScore;
-    resultSnumb.innerText = sScore;
-    resultFnumb.innerText = fScore;
-    resultPnumb.innerText = pScore;
-    resultInumb.innerText = iScore;
-    resultNnumb.innerText = nScore;
-    resultTnumb.innerText = tScore;
-    resultJnumb.innerText = jScore;
+    console.log("e성향" + eScore);
+    console.log("s성향" + sScore);
+    console.log("f성향" + fScore);
+    console.log("p성향" + pScore);
+    console.log("i성향" + iScore);
+    console.log("n성향" + nScore);
+    console.log("t성향" + tScore);
+    console.log("j성향" + jScore);
+
 
     }   // 카운트 함수 끝
     
